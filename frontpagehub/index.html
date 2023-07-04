@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" href="myown.ico" type="image/x-icon" />
-    <title>GOOGLE SEARCH PAGE</title>
+    <link rel="icon" href="myown.ico" type="image/x-icon" />
+    <title>Document</title>
     <style>
       .shield {
         width: 100%;
@@ -42,7 +42,6 @@
         border-radius: 40px;
         border: 1px solid black;
       }
-      
       input {
         border: none;
         font-size: x-large;
@@ -75,7 +74,7 @@
         justify-content: center;
         align-items: center;
       }
-      body{
+      body {
         background-image: url("Wallpaper.png");
         background-size: cover;
         background-repeat: no-repeat;
@@ -100,9 +99,83 @@
       #google-letters {
         font-size: 80px;
       }
+
+
+      @media (min-width: 200px) and (max-width: 380px) {
+        #google-letters {
+          font-size: 20px;
+        }
+        #the-search-bar {
+          width: 700px;
+        }
+        .thebox {
+          width: 45%;
+        }
+        .shield {
+          margin-top: 120px;
+        }
+        
+      }
+      @media (min-width: 381px) and (max-width: 399px) {
+        #the-search-bar {
+          width: 600px;
+        }
+        #protection {
+          width: 100%;
+        }
+        #google-letters {
+          font-size: 50px;
+        }
+      }
+
+      @media (min-width: 400px) and (max-width: 600px) {
+        #the-search-bar {
+          width: 600px;
+        }
+        #protection {
+          width: 100%;
+        }
+        #google-letters {
+          font-size: 50px;
+        }
+        /* #thebox{
+          width: 20%;
+        } */
+        .shield {
+          margin-top: 120px;
+        }
+      }
+      @media (min-width: 620px) and (max-width: 1024px) {
+        #the-search-bar {
+          width: 800px;
+        }
+        .shield {
+          margin-top: 120px;
+        }
+      }
+      #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    #video-content {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
     </style>
   </head>
   <body>
+    <video id="video-background" autoplay loop muted>
+      <source src="Chillhop-WhiteOak.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     <div class="shield">
       <section class="thebox">
         <div id="the-big-google-button">
@@ -127,13 +200,12 @@
 
             <!-- TEXT WHAT YOU WANT TO SEARCH FOR  -->
             <form
-              style="width: 100%; height: 45px; border-radius: 20px"
               action="https://www.google.com/search"
               method="GET"
+              target="_blank"
             >
               <input
                 type="search"
-                style="width: 100%; height: 45px; border-radius: 20px"
                 placeholder="Search"
                 name="q"
                 autofocus
@@ -153,27 +225,27 @@
 
             <!--  BEGINING THE MICROPHONE ICON -->
             <div id="mic">
-                <svg
-                  class="goxjub"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill="#4285f4"
-                    d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"
-                  ></path>
-                  <path fill="#34a853" d="m11 18.08h2v3.92h-2z"></path>
-                  <path
-                    fill="#fbbc04"
-                    d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"
-                  ></path>
-                  <path
-                    fill="#ea4335"
-                    d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"
-                  ></path>
-                </svg>
-              </div>
+              <svg
+                class="goxjub"
+                focusable="false"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#4285f4"
+                  d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"
+                ></path>
+                <path fill="#34a853" d="m11 18.08h2v3.92h-2z"></path>
+                <path
+                  fill="#fbbc04"
+                  d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"
+                ></path>
+                <path
+                  fill="#ea4335"
+                  d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"
+                ></path>
+              </svg>
+            </div>
             <!-- END OF THE MICROPHONE ICON -->
 
             <!-- BEGINING OF CAMERA ICON -->
