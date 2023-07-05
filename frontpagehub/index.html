@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="myown.ico" type="image/x-icon" />
-    <title>DevByAkinola</title>
+    <title>Document</title>
     <style>
       .shield {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
       .thebox {
         width: 60%;
@@ -105,12 +105,13 @@
       }
 
       /* @media (min-width: 200px) and (max-width: 380px) { */
-        @media (max-width: 767px) { 
+      @media (max-width: 767px) {
         #google-letters {
           font-size: 40px;
         }
         #the-search-bar {
           width: 700px;
+          /* transform: translate(0%, 0%); */
         }
         .thebox {
           width: 45%;
@@ -118,19 +119,31 @@
         .shield {
           margin-top: 30px;
         }
-        #search {
-          width: 20%;
-        }
+        /* #search {
+          width: 10%;
+        } */
         #mic {
-          width: 20%;
+          width: 10%;
         }
         #camera {
-          width: 20%;
+          width: 10%;
+        }
+        #protection{
+          width: 320px;
+          transform: translate(-25%, 0%);
         }
         input {
           width: 100%;
           border: none;
           font-size: medium;
+        }
+        #different-laguages{
+          width: 300px;
+          transform: translate(-22%, 0%);
+        }
+        #footer{
+          width: 300px;
+          transform: translate(-22%, 0%);
         }
       }
 
@@ -184,7 +197,7 @@
             <form
               action="https://www.google.com/search"
               method="GET"
-              
+              target="_blank"
             >
               <input
                 type="search"
